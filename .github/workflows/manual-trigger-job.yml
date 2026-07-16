@@ -10,8 +10,10 @@ jobs:
     - name: Check out repo
       uses: actions/checkout@main
     - name: Install az ml extension
-      run: az extension add -n ml -y
+            run: az extension add -n ml -y
     - name: Azure login
+      using: 'node24'
+      main: 'main.js'
       uses: azure/login@v2
       with:
         creds: ${{secrets.AZURE_CREDENTIALS}}

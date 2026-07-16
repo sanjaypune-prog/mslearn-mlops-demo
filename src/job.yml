@@ -6,7 +6,8 @@ command: >-
   --reg_rate ${{inputs.reg_rate}}
   --metrics_output ${{outputs.metrics_output}}
 inputs:
-  training_data: type: uri_file 
+  training_data: 
+  type: uri_file 
   path: azureml:diabetes-data@latest
 
 
